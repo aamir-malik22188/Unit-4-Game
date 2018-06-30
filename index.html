@@ -9,18 +9,19 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/javascript/game.js">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Work+Sans" rel="stylesheet">
     
     <title>World Cup Game</title>
 </head>
 
-<h1>World Cup 2018 - Penalty Kick Game </h1>
+<h1><strong>World Cup 2018 - Penalty Kick Game</strong> </h1>
 
 <body id="background" background="https://wallpapercave.com/wp/wp2306040.jpg">
 
 <!--Game rules and Team Cards for Row 1--> 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-4">
+        <div class="col-4 gamerules">
                 <h2>Game Rules</h2>
                     <ol>
                         <li>Pick a team of your choice.</li>
@@ -30,42 +31,42 @@
                         <li>If you lose, game starts over.</li>
                     </ol>
         </div>
-        <div class="col-2">
+        <div class="col-2" id="teamavailable germanyteam">
                 <div class="card" style="width: 10rem;">
-                        <img class="card-img-top" src="assets/images/germanflag.jpg" alt="German Flag">
+                        <img class="card-img-top availableteam" src="assets/images/germanflag.jpg" alt="German Flag" id="germanyflagimage">
                         <div class="card-body">
                           <h5 class="card-title">Germany</h5>
-                          <p class="card-text">Penalty Kick Value = 200</p>
+                          <p class="penaltykick">Penalty Kick Value = 200</p>
                           <a href="#" class="btn btn-primary">Select</a>
                         </div> 
                 </div>
         </div>
-        <div class="col-2">       
+        <div class="col-2" id="teamavailable mexicoteam">       
                 <div class="card" style="width: 10rem;">
-                        <img class="card-img-top" src="assets/images/mexicoflag.png" alt="Mexico Flag">
+                        <img class="card-img-top availableteam" src="assets/images/mexicoflag.png" alt="Mexico Flag" id="mexicoflagimage">
                         <div class="card-body">
                           <h5 class="card-title">Mexico</h5>
-                          <p class="card-text">Penalty Kick Value = 175</p>
+                          <p class="penaltykick">Penalty Kick Value = 175</p>
                           <a href="#" class="btn btn-primary">Select</a>
                         </div> 
                 </div>
         </div>        
-        <div class="col-2">
+        <div class="col-2" id="teamavailable russiateam">
                 <div class="card" style="width: 10rem;">
-                        <img class="card-img-top" src="assets/images/russianflag.svg" alt="Russian Flag">
+                        <img class="card-img-top availableteam" src="assets/images/russianflag.svg" alt="Russian Flag" id="russiaflagimage">
                         <div class="card-body">
                           <h5 class="card-title">Russian</h5>
-                          <p class="card-text">Penalty Kick Value = 150</p>
+                          <p class="penaltykick">Penalty Kick Value = 150</p>
                           <a href="#" class="btn btn-primary">Select</a>
                         </div> 
                 </div>
         </div>
-        <div class="col-2">
+        <div class="col-2" id="teamavailable spainteam">
                 <div class="card" style="width: 10rem;">
-                        <img class="card-img-top" src="assets/images/spainflag.jpg" alt="Spain Flag">
+                        <img class="card-img-top availableteam" src="assets/images/spainflag.jpg" alt="Spain Flag" id="spainflagimage">
                         <div class="card-body">
                           <h5 class="card-title">Spain</h5>
-                          <p class="card-text">Penalty Kick Value = 125</p>
+                          <p class="penaltykick">Penalty Kick Value = 125</p>
                           <a href="#" class="btn btn-primary">Select</a>
                         </div> 
                 </div>
@@ -81,20 +82,30 @@
         <div class="col-10">
             <h3>Scoreboard</h3>
         </div>
-        <div class="col-3">
-                <canvas id="myCanvas" width="250rem" height="250rem" style="border:4px solid white;"></canvas>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2">
+            <h3>My Team</h3>
         </div>
-        <div class="col-3">
+        <div class="col-10">
+            <h3>Opponent</h3>
+        </div>
+<div class="container-fluid">   
+    <div class="row">         
+        <div class="col-2">
+                <canvas id="myCanvas" width="250rem" height="250rem"></canvas>
+        </div>
+        <div class="col-2">
             <button id="kick">Kick</buttom>
         </div>
-        <div class="col-3">
+        <div class="col-2">
             <button id="restart">Restart</button>
         </div>    
-        <div class="col-3">
-                <canvas id="myCanvas" width="250rem" height="250rem" style="border:4px solid white;"></canvas>
+        <div class="col-2">
+                <canvas id="myCanvas" width="250rem" height="250rem"></canvas>
         </div>    
     </div>
-
+</div>
 
 
  </div>   
